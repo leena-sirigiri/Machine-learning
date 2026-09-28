@@ -1,0 +1,316 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyNLz9wLFt3fxKljbcT8zXp+",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/leena-sirigiri/Machine-learning/blob/main/LAB_2_(17_08_26).ipynb(PANDAS)\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#AP24110011180\n"
+      ],
+      "metadata": {
+        "id": "ZTVpBhiAd9MS"
+      }
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "AfopTQVo6dW8",
+        "outputId": "a74b1001-891c-46ff-b9aa-abe4ca4f05c9"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "0    S\n",
+            "1    I\n",
+            "2    V\n",
+            "3    A\n",
+            "dtype: object\n"
+          ]
+        }
+      ],
+      "source": [
+        "import pandas as pd\n",
+        "import numpy as np\n",
+        "info = np.array(['S','I','V','A'])\n",
+        "a = pd.Series(info)\n",
+        "print(a)"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [],
+      "metadata": {
+        "id": "BteFpwwjd8OY"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import pandas as pd\n",
+        "\n",
+        "df = pd.DataFrame()\n",
+        "print(df)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "YXH68Jw57rs2",
+        "outputId": "bd425236-790b-4831-eab6-c87b4acae921"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Empty DataFrame\n",
+            "Columns: []\n",
+            "Index: []\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "KnPyH8lwDp2y"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import pandas as pd\n",
+        "x= ['leena','Vindhya','navya']\n",
+        "df = pd.DataFrame(x)\n",
+        "print(df)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "OP5X7VXXDqA1",
+        "outputId": "78bfd023-360d-413e-ad71-fedaec9e53ae"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "         0\n",
+            "0    leena\n",
+            "1  Vindhya\n",
+            "2    navya\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import pandas as pd\n",
+        "infor = {'ID':[11180,11267,11269],'Name':['leena','Vindhya','navya']}\n",
+        "df = pd.DataFrame(infor)\n",
+        "print(df)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "n65vVJuoGk3C",
+        "outputId": "cea4ffd9-1833-46e7-8456-145f210559e7"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "      ID     Name\n",
+            "0  11180    leena\n",
+            "1  11267  Vindhya\n",
+            "2  11269    navya\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "info = {'one' : pd.Series([1, 2, 3, 4, 5, 6], index=['a', 'b', 'c', 'd', 'e', 'f']),\n",
+        " 'two' : pd.Series([1, 2, 3, 4, 5, 6, 7, 8], index=['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'])}\n",
+        "d1 = pd.DataFrame(info)\n",
+        "print (d1)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "GVYeJwBHHZjG",
+        "outputId": "944b5741-7553-4fe5-9939-62b74f60e40e"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "   one  two\n",
+            "a  1.0    1\n",
+            "b  2.0    2\n",
+            "c  3.0    3\n",
+            "d  4.0    4\n",
+            "e  5.0    5\n",
+            "f  6.0    6\n",
+            "g  NaN    7\n",
+            "h  NaN    8\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import pandas as pd\n",
+        "info = {'one' : pd.Series([1, 2, 3, 4, 5, 6], index=['a', 'b', 'c', 'd', 'e', 'f']),\n",
+        "'two' : pd.Series([1, 2, 3, 4, 5, 6, 7, 8], index=['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'])}\n",
+        "d1 = pd.DataFrame(info)\n",
+        "print (d1 ['one'])\n",
+        "print(d1['two'])\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "tZkLuPEEIQVV",
+        "outputId": "b8a519d7-3059-4f8f-db7f-08ae9d96cb1b"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "a    1.0\n",
+            "b    2.0\n",
+            "c    3.0\n",
+            "d    4.0\n",
+            "e    5.0\n",
+            "f    6.0\n",
+            "g    NaN\n",
+            "h    NaN\n",
+            "Name: one, dtype: float64\n",
+            "a    1\n",
+            "b    2\n",
+            "c    3\n",
+            "d    4\n",
+            "e    5\n",
+            "f    6\n",
+            "g    7\n",
+            "h    8\n",
+            "Name: two, dtype: int64\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import pandas as pd\n",
+        "info = {'one' : pd.Series([1, 2, 3, 4, 5], index=['a', 'b', 'c', 'd', 'e']),\n",
+        " 'two' : pd.Series([1, 2, 3, 4, 5, 6], index=['a', 'b', 'c', 'd', 'e', 'f'])}\n",
+        "df = pd.DataFrame(info)\n",
+        "print(df)\n",
+        " # Addition\n",
+        "print (\"Add new column by passing series\")\n",
+        "df['three']=pd.Series([20,40,60],index=['a','b','c'])\n",
+        "print (df)\n",
+        "print (\"Add new column using existing DataFrame columns\")\n",
+        "df['four']=df['one']+df['three']\n",
+        "print (df)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "WfXHdl6UIxGU",
+        "outputId": "df2a43a4-fdc8-4c17-d540-19da2df43b98"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "   one  two\n",
+            "a  1.0    1\n",
+            "b  2.0    2\n",
+            "c  3.0    3\n",
+            "d  4.0    4\n",
+            "e  5.0    5\n",
+            "f  NaN    6\n",
+            "Add new column by passing series\n",
+            "   one  two  three\n",
+            "a  1.0    1   20.0\n",
+            "b  2.0    2   40.0\n",
+            "c  3.0    3   60.0\n",
+            "d  4.0    4    NaN\n",
+            "e  5.0    5    NaN\n",
+            "f  NaN    6    NaN\n",
+            "Add new column using existing DataFrame columns\n",
+            "   one  two  three  four\n",
+            "a  1.0    1   20.0  21.0\n",
+            "b  2.0    2   40.0  42.0\n",
+            "c  3.0    3   60.0  63.0\n",
+            "d  4.0    4    NaN   NaN\n",
+            "e  5.0    5    NaN   NaN\n",
+            "f  NaN    6    NaN   NaN\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "iEvYgpJXK7t_"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
